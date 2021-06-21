@@ -14,7 +14,13 @@ route.post('/', async (req, res) => {
 });
 
 route.get('/', async (req, res) => {
-    res.json({status: 'Hello World! version 1'});
+    try {
+        const users = await User.find();
+        res.json(users);
+    } catch (err) {
+        res.json({ message: err })
+    }
+    // res.json({status: 'Hello World! version 1'});
 });
 
 module.exports = route;
