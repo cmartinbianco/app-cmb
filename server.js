@@ -6,6 +6,8 @@ connectDB();
 
 app.use(express.json( { extended: false }));
 
+app.use('/', require('./Api/user'));
+
 app.use('/api/userModel', require('./Api/user'));
 
 const Port = process.env.PORT || 5000;

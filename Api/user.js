@@ -13,4 +13,8 @@ route.post('/', async (req, res) => {
     res.json(userModel);
 });
 
+route.get('/', async (req, res) => {
+    res.json({status: 'Hello World! version 1'});
+});
+
 module.exports = route;
