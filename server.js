@@ -1,8 +1,15 @@
-const http = require('http')
-const PORT = process.env.PORT || 9000
-http
-  .createServer((req, res) => {
-    console.log('New connection')
-    res.end('Hello, World! version 6')
-  })
-  .listen(PORT, () => console.log('Listening on', PORT))
+const express = require('express');
+const connectDB = require('./connection');
+const app = express();
+
+connectDB();
+
+app.use(express.json( { extended: false }));
+
+app.use('/api/userModel', require('./Api/user'));
+
+const Port = process.env.PORT || 5000;
+
+app.listen(Port, () => {
+  console.log(`Example app listening on port ${Port}!`);
+});
