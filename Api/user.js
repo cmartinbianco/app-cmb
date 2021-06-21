@@ -1,6 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const User = require('../user');
+const User = require('../models/user');
 const route = express.Router();
 
 route.post('/', async (req, res) => {
@@ -19,8 +19,7 @@ route.get('/', async (req, res) => {
         res.json(users);
     } catch (err) {
         res.json({ message: err })
-    }
-    // res.json({status: 'Hello World! version 1'});
+    }    
 });
 
 module.exports = route;
