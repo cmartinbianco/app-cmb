@@ -1,0 +1,24 @@
+{
+  "name": "app-cmb",
+  "version": "1.0.0",
+  "description": "My APP",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cmartinbianco/app-cmb.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cmartinbianco/app-cmb/issues"
+  },
+  "homepage": "https://github.com/cmartinbianco/app-cmb#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
