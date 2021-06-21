@@ -1,8 +1,13 @@
 const express = require('express');
 const app = express();
 
-app.get('/', (res,req) => {
-    res.send('Hello World')
+app.use(express.json());
+
+app.get('/', (req, res) => {
+  res.json({status: 'Hello World!'});
 });
 
-app.listen(process.env.PORT || 5000);
+const port = process.env.PORT || 5000;
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}!`);
+});
