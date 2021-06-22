@@ -10,6 +10,8 @@ app.use('/', require('./Api/user'));
 
 app.use('/api/userModel', require('./Api/user'));
 
+app.use('/api/product', require('./Api/product'));
+
 const Port = process.env.PORT || 5000;
 
 app.listen(Port, () => {
