@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 // const URI = "mongodb+srv://mongodbUser:Cl@udi01971@cluster0.ggfky.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
-const URI = mongodb;
+const URI = ${{ secrets.mongodb }};
 
 const connectDB = async() => {
     await mongoose.connect(URI, { useUnifiedTopology: true, useNewUrlParser: true });
